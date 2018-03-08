@@ -10,7 +10,7 @@ from __future__ import print_function
 
 import argparse
 
-from pdist import dist
+from pdist.pdist import cdist
 from utils.state import State
 from colorama import Fore, Style
 # This file contains default directories and filenames:
@@ -101,7 +101,7 @@ state = State(args.state, year,
               alpha=alpha, alpha_increment=alpha_increment,
               alpha_max=alpha_max,
               beta=beta, beta_increment=beta_increment,
-              dist=dist.cdist,
+              dist=cdist,
               max_runs=max_runs,
               unique_filename_for_state=args.filename,
               verbose=args.verbose)

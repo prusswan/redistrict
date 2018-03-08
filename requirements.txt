@@ -5,7 +5,7 @@
 Cython == 0.24.1
 
 # helper_scripts/create_geojson.py: 10
-Shapely == 1.5.17.post1
+Shapely >= 1.5.17.post1
 
 # run.py: 15
 # utils/functions.py: 16
@@ -35,7 +35,7 @@ matplotlib == 1.5.3
 # utils/utils.py: 10
 # weighted_k_means/example.py: 3
 # weighted_k_means/wkmeans.py: 19
-numpy == 1.11.3
+numpy >= 1.11.3
 
 # helper_scripts/get_data.py: 3
 osfclient == 0.0.3
@@ -59,7 +59,7 @@ requests == 2.12.4
 scikit_learn == 0.18.1
 
 # pdist/compare.py: 13
-scipy == 0.18.1
+scipy >= 0.18.1
 
 # utils/state.py: 12
 # weighted_k_means/wkmeans.py: 20
