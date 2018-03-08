@@ -36,6 +36,7 @@ class State():
         self.state = state
         self.year = year
         self.alpha = alpha
+        self.initial_alpha = alpha
         self.alpha_increment = alpha_increment
         self.alpha_max = alpha_max
         self.beta = beta
@@ -63,6 +64,9 @@ class State():
         if blocks_2010_shapefile_dir is None:
             from settings import blocks_2010_shapefile_dir
         self.blocks_2010_shapefile_dir = blocks_2010_shapefile_dir
+        if block_assignments_dir is None:
+            from settings import block_assignments_dir
+        self.block_assignments_dir = block_assignments_dir
         if acs5_shapefile_dir is None:
             from settings import acs5_shapefile_dir
         self.acs5_shapefile_dir = acs5_shapefile_dir
@@ -172,7 +176,8 @@ class State():
                                                'tabblock2010_',
                                                self.state_fips,
                                                '_pophu.shp')
-            blocks_df = gpd.read_file(self.blocks_2010_shapefile_name)
+            print(self.blocks_2010_shapefile_name)
+            blocks_df = gpd.read_file(''.join(self.blocks_2010_shapefile_name))
             blocks_df['BLOCKID10'] = blocks_df['BLOCKID10'].apply(str)
 
             def get_group_GEOID(blockGEOID):
