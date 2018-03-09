@@ -12,7 +12,7 @@ import argparse
 
 from pdist.pdist import cdist
 from utils.state import State
-from colorama import Fore, Style
+from colorama import Fore, Style, init
 # This file contains default directories and filenames:
 from utils.settings import (alpha,
                             beta,
@@ -21,6 +21,8 @@ from utils.settings import (alpha,
                             max_runs,
                             alpha_max,
                             year)
+
+init()
 
 # This is to handle the passed CLI arguments:
 parser = argparse.ArgumentParser(
